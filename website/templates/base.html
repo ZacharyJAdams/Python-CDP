@@ -9,6 +9,7 @@
     
 </head>
 <body>
+  <Header>
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="/"><h1>C.D.P</h1></a>
@@ -42,17 +43,64 @@
                 <a class="btn btn-outline-secondary mx-2" href="/contact-us" role="button">Contact Us</a>
               </li>
             </ul>
-            
+            {% block search %}
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-secondary" type="submit">Search</button>
             </form>
+            {% endblock %}
           </div>
         </div>
       </nav>
-
-    <div class="container">{% block content %} {% endblock %}</div>
-
+    </Header>
+    <main>
+      <div class="container">{% block content %} {% endblock %}</div>
+    </main>
+    <footer>
+      <div class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-center text-md-left">
+          <div class="row text-center text-md-left">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h4 class="text-uppercase mb-4 font-weight-bold text-warning">Casino Discount Products</h5>
+              <p>
+                We sell quality wholesale casino products
+              </p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Hours of Operation</h5>
+              <P>Monday - Friday <br> 9:00 - 4:00 PM</P>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact Us</h5>
+              <a class="nav-link" href='tel:702-243-3589'>(702)-243-3589</a>
+              <a class="nav-link" href='mailto:kevin@cdpnv.com'>kevin@cdpnv.com</a>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Location</h5>
+              <a 
+              class="nav-link" 
+              href="https://www.google.com/maps/dir/36.1270122,-115.2007726/casino+discount+products+location/@36.1276529,-115.2016463,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x80c8c7c4b9f36b17:0xf6ebea8ddf5f60e1!2m2!1d-115.1937813!2d36.128566" 
+              target='_blank'
+              rel='noreferrer'>
+              4040 W Pioneer Ave <br> Las Vegas, Nevada 89144
+              </a>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <iframe
+            src='https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d6445.195794830187!2d-115.20164627380328!3d36.12765287037032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d36.127012199999996!2d-115.2007726!4m5!1s0x80c8c7c4b9f36b17%3A0xf6ebea8ddf5f60e1!2scasino%20discount%20products%20location!3m2!1d36.128566!2d-115.1937813!5e0!3m2!1sen!2sus!4v1680547383375!5m2!1sen!2sus'
+            title='CDP Location'
+            width='350'
+            height='250'
+            style="border: 0;"
+            allowfullscreen=''
+            loading='lazy'
+            referrerpolicy='no-referrer-when-downgrade'
+            ></iframe>
+          </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
